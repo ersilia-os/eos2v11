@@ -21,6 +21,7 @@ with open(input_file, "r") as f:
     for r in reader:
         smiles_list += [r[0]]
 
+
 root_url = "https://admetmesh.scbdd.com/"
 referer = "https://admetmesh.scbdd.com/service/screening/index"
 url = "https://admetmesh.scbdd.com/service/screening/cal"
@@ -32,8 +33,10 @@ def get_prediction(smiles):
     sess = requests.Session()
     r1 = sess.get(url)
     csrf_token = r1.cookies["csrftoken"]
+    
+    
 
-    data = {"csrfmiddlewaretoken": csrf_token, "smiles-list": [smiles], "method": 2}
+    data = {"csrfmiddlewaretoken": csrf_token, "smiles-list": smiles, "method": 2}
     headers = {"referer": referer}
 
     r2 = sess.post(url, data=data, headers=headers)
@@ -60,13 +63,17 @@ def get_prediction(smiles):
 
 
 def get_predictions(smiles_list):
+    print("smiles list in get_predictions: ")
+    print(smiles_list)
     R = []
     header = None
-    for smiles in smiles_list:
-        R_, header_ = get_prediction(smiles)
-        R += R_
-        if header is None:
-            header = header_
+    smiles=smiles_list[0]
+    for s in smiles_list[1:]:
+    	smiles=smiles+"\r\n"+s
+    R_, header_ = get_prediction(smiles)
+    R += R_
+    if header is None:
+    	header = header_
     return R, header
 
 
