@@ -1,28 +1,29 @@
-# Model title
+# ADMETlab 2 models for evaluation of ADMET properties
 ## Model identifiers
-- Slug:
-- Ersilia ID: 
-- Tags: 
+- Slug: admetlab-2
+- Ersilia ID: eos2v11
+- Tags: Toxicity, Tox21, ADMET
 
 # Model description
-Short description of the model in one or two sentences.
-- Input:
-- Output: {unit and description of output) 
-- Model type: (Regression or Classification)
-- Training set: (number of compounds and link to the training data)
-- Mode of training: (is it pretrained? that is were the checkpoints downloaded and used to train the model? or is it retrained? that is trained from scratch with an updated data)
+Systematic evaluation of ADMET properties, as well as physicochemical parameters and medicinal chemistry friendliness
+- Input: SMILES
+- Output: ADME, Toxicity, Physicochemical property (Predicted relevant ADMET properties, Tox21 outcomes, physicochemical properties and drug-likeness. Outputs are of mixed type, including classification (labels) and continuous values.)
+- Model type: Regression, Classification
+- Training set: 250,000 Molecules
+- Mode of training: Online
 
 # Source code
 Cite the source publication.
-- Code: include link to the source code
-- Checkpoints: include the link to the checkpoints used if model is a pretrained model
+- Code: The model uses the web application available at https://admetmesh.scbdd.com/
+- Checkpoints: N/A
 
 # License
-State the licences used which are GPL v3 license used by Ersilia and the license used by the source code, if any exists. Use [this guide]() on how to license new models to be incorporated into Ersilia's model hub 
+The GPL-v3 license applies to all parts of the repository.
 
 # History 
-- State the date when the model was downloaded and incorporated into Ersilia.
-- List any essential steps/modifications to the original code
+- We have developed a python script that accesses the web server available at https://www.ebi.ac.uk/chembl/maip/ to run the predictions.
+- Python `requests` is used to post the input to the server and fetch the results.
+- Model was incorporated to Ersilia on 9/16/2022
 
 # About us
 The [Ersilia Open Source Initiative](https://ersilia.io) is a Non Profit Organization ([1192266](https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/5170657/full-print)) with the mission is to equip labs, universities and clinics in LMIC with AI/ML tools for infectious disease research.
