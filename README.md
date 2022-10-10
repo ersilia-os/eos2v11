@@ -13,7 +13,6 @@ Systematic evaluation of ADMET properties, as well as physicochemical parameters
 - Mode of training: Online
 
 # Source code
-Cite the source publication.
 - Code: The model uses the web application available at https://admetmesh.scbdd.com/
 - Checkpoints: N/A
 
