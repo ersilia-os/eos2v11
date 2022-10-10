@@ -21,7 +21,7 @@ Cite the source publication.
 The GPL-v3 license applies to all parts of the repository.
 
 # History 
-- We have developed a python script that accesses the web server available at https://www.ebi.ac.uk/chembl/maip/ to run the predictions.
+- We have developed a python script that accesses the web server available at https://admetmesh.scbdd.com/ to run the predictions.
 - Python `requests` is used to post the input to the server and fetch the results.
 - Model was incorporated to Ersilia on 9/16/2022
 
