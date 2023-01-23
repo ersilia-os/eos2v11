@@ -1,30 +1,40 @@
-# ADMETlab 2 models for evaluation of ADMET properties
-## Model identifiers
-- Slug: admetlab-2
-- Ersilia ID: eos2v11
-- Tags: Toxicity, Tox21, ADMET
+# ADMETLab-2
 
-# Model description
-Systematic evaluation of ADMET properties, as well as physicochemical parameters and medicinal chemistry friendliness
-- Input: SMILES
-- Output: ADME, Toxicity, Physicochemical property (Predicted relevant ADMET properties, Tox21 outcomes, physicochemical properties and drug-likeness. Outputs are of mixed type, including classification (labels) and continuous values.)
-- Model type: Regression, Classification
-- Training set: 250,000 Molecules
-- Mode of training: Online
+ADMETLab2 is the improved version of ADMETLab, a suite of models for systematic evaluation of ADMET properties. ADMETLab2 provides predictions on 17 physicochemical properties, 13 medicinal chemistry properties, 23 ADME properties, 27 toxicity endpoints and 8 toxicophore rules. The code and training data are not released, using this model posts predictions to the ADMETLab2 online server. The Ersilia Model Hub also offers ADMETLab (v1) as a downloadable package for IP-sensitive queries.
 
-# Source code
-- Code: The model uses the web application available at https://admetmesh.scbdd.com/
-- Checkpoints: N/A
+## Identifiers
 
-# License
-The GPL-v3 license applies to all parts of the repository.
+* EOS model ID: `eos2v11`
+* Slug: `admetlab-2`
 
-# History 
-- We have developed a python script that accesses the web server available at https://admetmesh.scbdd.com/ to run the predictions.
-- Python `requests` is used to post the input to the server and fetch the results.
-- Model was incorporated to Ersilia on 9/16/2022
+## Characteristics
 
-# About us
+* Input: `Compound`
+* Input Shape: `Single`
+* Task: `Regression, Classification`
+* Output: `Experimental value, Probability`
+* Output Type: `Float`
+* Output Shape: `List`
+* Interpretation: Predicted relevant ADMET properties, Tox21 outcomes, physicochemical properties and drug-likeness. Outputs are of mixed type, including classification (labels) and continuous values.
+
+## References
+
+* [Publication](https://academic.oup.com/nar/article/49/W1/W5/6249611?login=false)
+* [Source Code](https://admetmesh.scbdd.com/)
+* Ersilia contributor: [miquelduranfrigola](https://github.com/miquelduranfrigola)
+
+## Citation
+
+If you use this model, please cite the [original authors](https://academic.oup.com/nar/article/49/W1/W5/6249611?login=false) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).
+
+## License
+
+This package is licensed under a GPL-3.0 license. The model contained within this package is licensed under a Proprietary license.
+
+Notice: Ersilia grants access to these models 'as is' provided by the original authors, please refer to the original code repository and/or publication if you use the model in your research.
+
+## About Us
+
 The [Ersilia Open Source Initiative](https://ersilia.io) is a Non Profit Organization ([1192266](https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/5170657/full-print)) with the mission is to equip labs, universities and clinics in LMIC with AI/ML tools for infectious disease research.
 
-[Help us](https://www.ersilia.io/donate) achieve our mission or [volunteer](https://www.ersilia.io/volunteer) with us!
+[Help us](https://www.ersilia.io/donate) achieve our mission!
