@@ -32,5 +32,11 @@
     "Publication": "https://academic.oup.com/nar/article/49/W1/W5/6249611?login=false",
     "Source Code": "https://admetmesh.scbdd.com/",
     "License": "Proprietary",
-    "Contributor": "miquelduranfrigola"
+    "Contributor": "miquelduranfrigola",
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2v11.zip",
+    "DockerHub": "https://hub.docker.com/r/ersiliaos/eos2v11",
+    "Docker Architecture": [
+        "AMD64",
+        "ARM64"
+    ]
 }

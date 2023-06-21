@@ -23,6 +23,11 @@ ADMETLab2 is the improved version of ADMETLab, a suite of models for systematic 
 * [Source Code](https://admetmesh.scbdd.com/)
 * Ersilia contributor: [miquelduranfrigola](https://github.com/miquelduranfrigola)
 
+## Ersilia model URLs
+* [GitHub](https://github.com/ersilia-os/eos2v11)
+* [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos2v11.zip)
+* [DockerHub](https://hub.docker.com/r/ersiliaos/eos2v11) (AMD64, ARM64)
+
 ## Citation
 
 If you use this model, please cite the [original authors](https://academic.oup.com/nar/article/49/W1/W5/6249611?login=false) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).
