@@ -102,7 +102,14 @@ jobs:
           echo "$assignees" >> $GITHUB_STEP_SUMMARY
           echo "shuffled_assignee=$assignees" >> $GITHUB_OUTPUT
           echo "shuffled_assignee=$assignees" >> $GITHUB_ENV
-          
+
+      - name: Check for existing issue
+        id: check_issue
+        run: |
+          gh auth login --with-token <<< ${{ secrets.GITHUB_TOKEN }}
+          issue_number=$(gh issue list --limit 100 --search "${{ vars.test_issue_title }}" --json number --jq '.[0].number')
+          echo "::set-output name=issue_number::$issue_number"
+   
       - name: Create a Test issue
         uses: actions-ecosystem/action-create-issue@b63bc2bbacb6a838dfe4a9f70da6665ae0962a49
         id: create_issue 
@@ -115,3 +122,4 @@ jobs:
             This model is ready for testing. If you are assigned to this issue, please try it out using the CLI, Google Colab and DockerHub and let us know if it works!
           labels: |
             test
+        if: steps.check_issue.outputs.issue_number == ''
