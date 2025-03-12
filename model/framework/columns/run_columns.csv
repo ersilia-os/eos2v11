@@ -1,0 +1,89 @@
+name,type,direction,description
+logs,float,high,Predicted logarithm of aqueous solubility value (log mol/L)
+logd,float,high,Predicted logarithm of n-octanol/water distribution coefficient at pH=7.4 (log mol/L)
+logp,float,high,Predicted logarithm of n-octanol/water distribution coefficient (log mol/L)
+pgp_inh,float,high,Prediction of P-glycoprotein (P-gp) inhibition; higher values indicate stronger inhibition
+pgp_sub,float,high,Prediction of whether a compound is a substrate of P-glycoprotein (P-gp)
+hia,float,high,Predicted human intestinal absorption (HIA) percentage
+f(20%),float,high,Predicted fraction absorbed in humans (at least 20%)
+f(30%),float,high,Predicted fraction absorbed in humans (at least 30%)
+caco_2,float,high,Predicted Caco-2 cell permeability (cm/s)
+mdck,float,high,Predicted MDCK cell permeability (cm/s)
+bbb,float,high,Predicted blood-brain barrier (BBB) permeability
+ppb,float,high,Predicted plasma protein binding percentage (PPB)
+vdss,float,high,Predicted volume of distribution at steady state (L/kg)
+fu,float,high,Predicted fraction unbound in plasma
+cyp1a2_inh,float,high,Prediction of CYP1A2 enzyme inhibition
+cyp1a2_sub,float,high,Prediction of CYP1A2 enzyme substrate likelihood
+cyp2c19_inh,float,high,Prediction of CYP2C19 enzyme inhibition
+cyp2c19_sub,float,high,Prediction of CYP2C19 enzyme substrate likelihood
+cyp2c9_inh,float,high,Prediction of CYP2C9 enzyme inhibition
+cyp2c9_sub,float,high,Prediction of CYP2C9 enzyme substrate likelihood
+cyp2d6_inh,float,high,Prediction of CYP2D6 enzyme inhibition
+cyp2d6_sub,float,high,Prediction of CYP2D6 enzyme substrate likelihood
+cyp3a4_inh,float,high,Prediction of CYP3A4 enzyme inhibition
+cyp3a4_sub,float,high,Prediction of CYP3A4 enzyme substrate likelihood
+cl,float,high,Predicted total clearance (mL/min/kg)
+t12,float,high,Predicted half-life (T½) of the compound (hours)
+herg,float,high,"Predicted hERG (human ether-à-go-go-related gene) channel inhibition, a key indicator of cardiotoxicity"
+h_ht,float,high,Predicted hepatotoxicity risk
+dili,float,high,Predicted Drug-Induced Liver Injury (DILI) risk
+ames,float,high,Prediction of Ames mutagenicity test results
+roa,float,high,Predicted route of administration feasibility
+fdamdd,float,high,Prediction of whether the compound is a known FDA Maximum Recommended Daily Dose (MRDD)
+skinsen,float,high,Prediction of skin sensitization potential
+carcinogenicity,float,high,Prediction of carcinogenicity risk
+ec,float,high,Predicted endocrine disruption potential
+ei,float,high,Predicted estrogenic activity potential
+respiratory,float,high,Prediction of respiratory toxicity risk
+bcf,float,high,Predicted bioconcentration factor (BCF) for bioaccumulation
+igc50,float,high,Predicted 50% growth inhibition concentration (IGC50) for aquatic toxicity
+lc50,float,high,Predicted lethal concentration (LC50) for aquatic toxicity
+lc50dm,float,high,Predicted LC50 in Daphnia magna (water flea)
+nr_ar,float,high,Prediction of nuclear receptor androgen receptor (NR-AR) activity
+nr_ar_lbd,float,high,Prediction of NR-AR ligand-binding domain activity
+nr_ahr,float,high,Prediction of aryl hydrocarbon receptor (AhR) activation
+nr_aromatase,float,high,Prediction of aromatase enzyme inhibition
+nr_er,float,high,Prediction of estrogen receptor (NR-ER) activity
+nr_er_lbd,float,high,Prediction of NR-ER ligand-binding domain activity
+nr_ppar_gamma,float,high,Prediction of peroxisome proliferator-activated receptor gamma (PPAR-γ) activity
+sr_are,float,high,Prediction of stress response related to antioxidant response element (ARE)
+sr_atad5,float,high,Prediction of stress response related to ATAD5 (DNA damage response)
+sr_hse,float,high,Prediction of heat shock response element (HSE) activation
+sr_mmp,float,high,Prediction of matrix metalloproteinase (MMP) activity
+sr_p53,float,high,Prediction of tumor suppressor p53 pathway activation
+mw,float,high,Molecular weight of the compound
+vol,float,high,Molecular volume of the compound
+dense,float,high,Molecular density
+nha,float,high,Number of hydrogen acceptors in the molecule
+nhd,float,high,Number of hydrogen donors in the molecule
+tpsa,float,high,Topological polar surface area (TPSA)
+nrot,float,high,Number of rotatable bonds
+nring,float,high,Number of rings in the molecular structure
+maxring,float,high,Size of the largest ring in the molecule
+nhet,float,high,Number of heteroatoms
+fchar,float,high,Fraction of charged atoms
+nrig,float,high,Number of rigid bonds
+flex,float,high,Molecular flexibility score
+nstereo,float,high,Number of stereocenters in the molecule
+nongenotoxic_carcinogenicity,float,high,Prediction of non-genotoxic carcinogenicity potential
+ld50_oral,float,high,Predicted oral lethal dose 50 (LD50) in rats (mg/kg)
+genotoxic_carcinogenicity_mutagenicity,float,high,Prediction of genotoxic carcinogenicity and mutagenicity potential
+surechembl,float,high,Presence of the compound in the SureChEMBL database
+nonbiodegradable,float,high,Prediction of whether the compound is non-biodegradable
+skin_sensitization,float,high,Prediction of skin sensitization potential
+acute_aquatic_toxicity,float,high,Prediction of acute toxicity to aquatic organisms
+toxicophores,float,high,Presence of known toxicophores (structural alerts for toxicity)
+qed,float,high,Quantitative estimate of drug-likeness (QED) score
+synth,float,high,Synthetic accessibility score
+fsp3,float,high,Fraction of sp³-hybridized carbons in the molecule
+mce_18,float,high,Molecular complexity estimate (MCE-18)
+natural_product_likeness,float,high,Score indicating natural product-likeness
+alarm_nmr,float,high,NMR-based structural alert prediction
+bms,float,high,Bristol-Myers Squibb (BMS) lead-like rules compliance
+chelating,float,low,Prediction of chelating properties (metal-binding potential)
+pains,float,low,Presence of PAINS (Pan-Assay Interference Compounds) structural alerts
+lipinski,string,,Compliance with Lipinski’s Rule of Five (≤2 violations)
+pfizer,string,,Compliance with Pfizer's rule (≥2 conditions met)
+gsk,string,,Compliance with GSK's drug-likeness rules
+goldentriangle,string,,Compliance with the Golden Triangle drug-likeness model
