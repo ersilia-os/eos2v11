@@ -1,7 +1,7 @@
 {
     "Identifier": "eos2v11",
     "Slug": "admetlab-2",
-    "Status": "Ready",
+    "Status": "Archived",
     "Title": "ADMETLab-2",
     "Description": "ADMETLab2 is the improved version of ADMETLab, a suite of models for systematic evaluation of ADMET properties. ADMETLab2 provides predictions on 17 physicochemical properties, 13 medicinal chemistry properties, 23 ADME properties, 27 toxicity endpoints and 8 toxicophore rules. The code and training data are not released, using this model posts predictions to the ADMETLab2 online server. The Ersilia Model Hub also offers ADMETLab (v1) as a downloadable package for IP-sensitive queries.\n",
     "Mode": "Online",
