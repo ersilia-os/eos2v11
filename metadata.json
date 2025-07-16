@@ -14,8 +14,8 @@
         "Classification"
     ],
     "Output": [
-        "Experimental value",
-        "Probability"
+        "Value",
+        "Score"
     ],
     "Output Type": [
         "Float"
